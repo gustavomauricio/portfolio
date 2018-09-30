@@ -1,0 +1,226 @@
+body {
+	font-family: Open Sans,sans-serif;
+	background-color: #f2f4f5;
+}
+
+footer {
+	text-align: center;
+	padding: 30px 0;
+	background-color: #000;
+	color: #FFF;
+}
+
+#home {
+	background-image: url(../img/bg-landing.jpg);
+	background-position: bottom;
+	background-size: cover;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	color: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 800;
+
+	/* remove those 2 in case of using bootstrap */
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #f05f40;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.border-bot {
+	border-bottom-style: solid;
+	border-color: #f05f40;
+	border-width: 3px;
+}
+
+.bg-color2 {
+	background-color: #e6e6e6;
+}
+
+.companies {
+	display: flex;
+	justify-content: space-between;
+}
+
+.fix-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.nav-link {
+	color: #FFF !important;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 0.7rem;
+}
+
+.scrolled {
+	background-color: #FFF;
+	color: #000 !important;
+}
+
+.bg-main {
+	background-color:#070849;
+}
+
+.avatar {
+	max-height: 140px;
+	border-radius: 50%;
+}
+
+.mybtn {
+	color: #FFF;
+	background-color: #f05f40;
+	border-radius: 5px;
+	padding: 15px;
+	text-transform: uppercase;
+	font-weight: 800;
+	border-style: none;
+	cursor: pointer;
+}
+
+.color-orange {
+	color: #f05f40 !important;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.none {
+	display: none;
+}
+
+.ltspacing1 {
+	letter-spacing: 1px;
+}
+
+.ltspacing4 {
+	letter-spacing: 4px;
+}
+
+.ltspacing8 {
+	letter-spacing: 8px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.flex {
+	display: flex;
+}
+
+.aligncenter {
+	align-items: center;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.mw100 {
+	max-width: 100%;
+}
+
+.fade-2 {
+	opacity: 0.2;
+}
+
+/* Custom padding margin */
+
+.pt200 {
+	padding-top: 200px;
+}
+
+.phor40 {
+	padding: 0 40px;
+}
+
+.pvert100 {
+	padding: 100px 0;
+}
+
+.pvert30 {
+	padding: 30px 0;
+}
+
+.mt60 {
+	margin-top: 60px;
+}
+
+/* Skill carousel */
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.skills-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+#skills-car img {
+	margin: 20px;
+}
