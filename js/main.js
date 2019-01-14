@@ -64,6 +64,10 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('.nav-link').on('click', function(){
+        $('.navbar-collapse').removeClass('show');
+    });
 });
 
 // Click handler for elements with dot class (carousel)
