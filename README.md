@@ -1,3 +1,3 @@
 # Portfolio
 
-Personal porfolio made just for fun
+Made with bootstrap utility classes and grid system, jquery, and native stuff
