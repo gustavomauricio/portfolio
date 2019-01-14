@@ -26,10 +26,14 @@ $(document).ready(function() {
             if (scroll >= 60) {
                 header.addClass('scrolled');
                 navLink.addClass('scrolled');
+                header.removeClass('navbar-dark');
+                header.addClass('navbar-light');
             }
             else {
                 header.removeClass('scrolled')
                 navLink.removeClass('scrolled');
+                header.removeClass('navbar-light');
+                header.addClass('navbar-dark');
             }
         });
     });

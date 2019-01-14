@@ -45,11 +45,11 @@ a:hover {
 	border-width: 3px;
 }
 
-.bg-main {
-	background-color:#070849;
+.bg-half-faded {
+	background-color:rgb(0,0,0,0.5);
 }
 
-.bg-color2 {
+.bg-almost-white {
 	background-color: #e6e6e6;
 }
 
@@ -66,7 +66,7 @@ a:hover {
 }
 
 .scrolled {
-	background-color: #FFF;
+	background-color: #FFF !important;
 	color: #000 !important;
 }
 
