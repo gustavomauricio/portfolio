@@ -65,6 +65,10 @@ a:hover {
 	border-width: 3px;
 }
 
+.bg-main {
+	background-color:#070849;
+}
+
 .bg-color2 {
 	background-color: #e6e6e6;
 }
@@ -92,10 +96,6 @@ a:hover {
 .scrolled {
 	background-color: #FFF;
 	color: #000 !important;
-}
-
-.bg-main {
-	background-color:#070849;
 }
 
 .avatar {
@@ -134,16 +134,8 @@ a:hover {
 	letter-spacing: 4px;
 }
 
-.ltspacing8 {
-	letter-spacing: 8px;
-}
-
 .uppercase {
 	text-transform: uppercase;
-}
-
-.capitalize {
-	text-transform: capitalize;
 }
 
 .flex {
@@ -160,10 +152,6 @@ a:hover {
 
 .justify-center {
 	justify-content: center;
-}
-
-.w100 {
-	width: 100%;
 }
 
 .mw100 {
