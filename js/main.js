@@ -71,9 +71,9 @@ $(".dot").click(function(){
 function currentSkill(dotIndex){
     var children = $('#skills-car').children("[id]");
     children.each(function(index){
-        $(this).addClass("none");
+        $(this).addClass("d-none");
         if(index == dotIndex)
-            $(this).removeClass("none");       
+            $(this).removeClass("d-none");       
     });
 
 }

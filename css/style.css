@@ -22,26 +22,6 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 800;
-
-	/* remove those 2 in case of using bootstrap */
-	margin-top: 0;
-	margin-bottom: 0.5rem;
-}
-
-h3 {
-	font-size: 1.75rem;
-}
-
-h4 {
-	font-size: 1.5rem;
-}
-
-h5 {
-	font-size: 1.25rem;
-}
-
-h6 {
-	font-size: 1rem;
 }
 
 ul {
@@ -78,14 +58,6 @@ a:hover {
 	justify-content: space-between;
 }
 
-.fix-top {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
-}
-
 .nav-link {
 	color: #FFF !important;
 	text-transform: uppercase;
@@ -118,14 +90,6 @@ a:hover {
 	color: #f05f40 !important;
 }
 
-.text-center {
-	text-align: center;
-}
-
-.none {
-	display: none;
-}
-
 .ltspacing1 {
 	letter-spacing: 1px;
 }
@@ -138,22 +102,6 @@ a:hover {
 	text-transform: uppercase;
 }
 
-.flex {
-	display: flex;
-}
-
-.aligncenter {
-	align-items: center;
-}
-
-.justify-end {
-	justify-content: flex-end;
-}
-
-.justify-center {
-	justify-content: center;
-}
-
 .mw100 {
 	max-width: 100%;
 }
@@ -163,10 +111,6 @@ a:hover {
 }
 
 /* Custom padding margin */
-
-.pt200 {
-	padding-top: 200px;
-}
 
 .phor40 {
 	padding: 0 40px;
@@ -211,4 +155,8 @@ a:hover {
 
 #skills-car img {
 	margin: 20px;
+}
+
+button:focus {
+	outline-color: #f05f40;
 }
