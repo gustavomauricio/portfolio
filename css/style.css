@@ -5,7 +5,6 @@ body {
 
 footer {
 	text-align: center;
-	padding: 30px 0;
 	background-color: #000;
 	color: #FFF;
 }
@@ -112,20 +111,12 @@ a:hover {
 
 /* Custom padding margin */
 
-.phor40 {
+.px-40 {
 	padding: 0 40px;
 }
 
-.pvert100 {
-	padding: 100px 0;
-}
-
-.pvert30 {
-	padding: 30px 0;
-}
-
-.mt60 {
-	margin-top: 60px;
+.py-6 {
+	padding: 6rem 0;
 }
 
 /* Skill carousel */
