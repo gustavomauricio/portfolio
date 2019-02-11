@@ -34,47 +34,71 @@ $(document).ready(function() {
     });
   });
 
-    // Insert letters with an interval
-    const name = "Gustavo Mauricio";
+  // Insert letters with an interval
+  const name = "Gustavo Mauricio";
 
-    for(let i=0; i<=name.length; i++) {
-      // Slices string from 0 to current iteration
-      let nameSlice = name.slice(0, i);
-      setTimeout(function() {
-        $('#name').html(nameSlice);
-      }, i * 150);
-    }
+  for(let i=0; i<=name.length; i++) {
+    // Slices string from 0 to current iteration
+    let nameSlice = name.slice(0, i);
+    setTimeout(function() {
+      $('#name').html(nameSlice);
+    }, i * 150);
+  }
 
-    // Adds class to nav items when scrolling respective section
-    $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-      $('.nav-link').each(function() {
-      var href = $(this).attr('href');
-        if (scroll + window.innerHeight === document.body.offsetHeight) {
-          $('.nav-link').removeClass('color-orange');
-          $("a[href*='contact']").addClass('color-orange');
-        }
-        if (scroll > $(href).offset().top - 1 && scroll < $(href).offset().top + $(href).outerHeight()) {
-          $('.nav-link').removeClass('color-orange');
-          $(this).addClass('color-orange');
-        }
-      });
+  // Adds class to nav items when scrolling respective section
+  $(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+    $('.nav-link').each(function() {
+    var href = $(this).attr('href');
+      if (scroll + window.innerHeight === document.body.offsetHeight) {
+        $('.nav-link').removeClass('color-orange');
+        $("a[href*='contact']").addClass('color-orange');
+      }
+      if (scroll > $(href).offset().top - 1 && scroll < $(href).offset().top + $(href).outerHeight()) {
+        $('.nav-link').removeClass('color-orange');
+        $(this).addClass('color-orange');
+      }
     });
+  });
 
-    $('.nav-link').on('click', function() {
-      $('.navbar-collapse').removeClass('show');
-    });
+  $('.nav-link').on('click', function() {
+    $('.navbar-collapse').removeClass('show');
+  });
+
+  // Click handler for elements with dot class (carousel)
+  $(".dot").click(function() {
+    $(".dot").removeClass("active");
+    $(this).addClass("active");
+
+    // Get index of the clicked dot
+    var dotIndex = $(".dot").index(this);
+    currentSkill(dotIndex);
+  });
+
+  $("#skills-car").swipe({
+    swipe: function(event, direction) {
+      var dots = $(".dot");
+      var activeDot = $('.dot.active');
+      var activeIndex = dots.index(activeDot);
+
+      if (direction == 'left') {
+        if (activeIndex !== 0) {
+          activeDot.removeClass("active");
+          dots.eq(activeIndex-1).addClass("active");
+          currentSkill(activeIndex-1);
+        }
+      } else if (direction == 'right') {
+        if (activeIndex !== dots.length-1) {
+          activeDot.removeClass("active");
+          dots.eq(activeIndex+1).addClass("active");
+          currentSkill(activeIndex+1);
+        }
+      }
+
+    }, allowPageScroll:"auto"
+  });
+
 });
-
-// Click handler for elements with dot class (carousel)
-$(".dot").click(function() {
-  $(".dot").removeClass("active");
-  $(this).addClass("active");
-
-  // Get index of the clicked dot
-  var dotIndex = $(".dot").index(this);
-  currentSkill(dotIndex);
-})
 
 function currentSkill(dotIndex) {
   var children = $('#skills-car').children("[id]");
