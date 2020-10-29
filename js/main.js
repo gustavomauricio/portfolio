@@ -42,7 +42,7 @@ $(document).ready(function() {
     let nameSlice = name.slice(0, i);
     setTimeout(function() {
       $('#name').html(nameSlice);
-    }, i * 150);
+    }, i * 80);
   }
 
   // Adds class to nav items when scrolling respective section
