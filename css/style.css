@@ -44,10 +44,17 @@ a:hover {
 	text-decoration: none;
 }
 
-.border-bot {
-	border-bottom-style: solid;
-	border-color: #f05f40;
-	border-width: 3px;
+input, textarea, button {
+	border: none;
+	border-radius: 10px;
+}
+
+input, textarea {
+	width: 100%;
+}
+
+textarea {
+	resize: none;
 }
 
 .bg-half-faded {
@@ -83,11 +90,6 @@ a:hover {
 .mybtn {
 	color: #FFF;
 	background-color: #f05f40;
-	border-radius: 5px;
-	padding: 15px;
-	text-transform: uppercase;
-	font-weight: 800;
-	border-style: none;
 	cursor: pointer;
 }
 

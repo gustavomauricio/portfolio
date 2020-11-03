@@ -98,6 +98,27 @@ $(document).ready(function() {
     }, allowPageScroll:"auto"
   });
 
+  document.getElementById("contact-form").onsubmit = async function(event){
+    event.preventDefault();
+
+    var form = new FormData(event.target);
+
+    // fetch("https://www.hltv.org/", { 
+    //   mode: 'no-cors',
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(err => console.log(err));
+
+    const res = await fetch("https://solway-firth.netlify.app/.netlify/functions/contact", {
+      method: "post",
+      mode: 'no-cors',
+      body: JSON.stringify(form),
+    });
+
+    console.log(res);
+  };
+
 });
 
 function currentSkill(dotIndex) {
