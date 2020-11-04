@@ -8,6 +8,9 @@
     <title>Gustavo Maurício</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" integrity="sha512-D0B6cFS+efdzUE/4wh5XF5599DtW7Q1bZOjAYGBfC0Lg9WjcrqPXZto020btDyrlDUrfYKsmzFvgf/9AB8J0Jw==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/brand-colors.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -179,23 +182,31 @@
         <section class="py-6 bg-almost-white" id="contact">
           <div class="container">
             <div class="row">
-              <div class="col-lg">
+              <div class="col-12 mb-3">
                 <h5 class="ltspacing4 uppercase text-center">Contact</h5>
                 <hr>
-                <h6 class="uppercase">Email</h6>
-                <p>gustavo.mauricio58@gmail.com</p>
-                <h6 class="uppercase">Phone</h6>
-                <p>+351 916 520 761</p>
-                <a href="https://www.linkedin.com/in/gustavo-mauricio/" target="_blank">
-                  <h6 class="uppercase color-orange">LinkedIn</h6>
+                <form id="contact-form">
+                  <input class="mb-3 p-2" type="text" name="name" placeholder="Name" required />
+                  <input class="mb-3 p-2" type="text" name="email" placeholder="Email" required />
+                  <p class="error-message d-none text-danger">Please, enter a valid email</p>
+                  <textarea class="mb-3 p-2" name="body" placeholder="Please include any relevant details" rows="8" required></textarea>
+                  <button class="mybtn color-white py-2 px-4" type="submit">
+                    SUBMIT
+                  </button>
+                </form>
+                <p class="form-message"></p>
+              </div>
+              <div class="col-12 d-flex flex-row justify-content-center bg-almost-white pb-3">
+                <a href="https://www.linkedin.com/in/gustavo-mauricio/" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-2x fa-linkedin color mx-2"></i>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100000229942264" target="_blank">
-                  <h6 class="uppercase color-orange">Facebook</h6>
+                <a href="https://www.facebook.com/profile.php?id=100000229942264" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-2x fa-facebook color mx-2"></i>
                 </a>
-                <a href="https://twitter.com/warayml" target="_blank">
-                  <h6 class="uppercase color-orange">Twitter</h6>
+                <a href="https://twitter.com/warayml" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-2x fa-twitter color mx-2"></i>
                 </a>
-
+                <i class="fab fa-2x fa-youtube color mx-2"></i>
               </div>
             </div>
           </div>
