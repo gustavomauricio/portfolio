@@ -81,13 +81,13 @@ $(document).ready(function() {
       var activeDot = $('.dot.active');
       var activeIndex = dots.index(activeDot);
 
-      if (direction == 'left') {
+      if (direction == 'right') {
         if (activeIndex !== 0) {
           activeDot.removeClass("active");
           dots.eq(activeIndex-1).addClass("active");
           currentSkill(activeIndex-1);
         }
-      } else if (direction == 'right') {
+      } else if (direction == 'left') {
         if (activeIndex !== dots.length-1) {
           activeDot.removeClass("active");
           dots.eq(activeIndex+1).addClass("active");
