@@ -98,27 +98,42 @@ $(document).ready(function() {
     }, allowPageScroll:"auto"
   });
 
-  document.getElementById("contact-form").onsubmit = async function(event){
+  $("#contact-form").submit(function(event) {
     event.preventDefault();
 
     var form = new FormData(event.target);
 
-    // fetch("https://www.hltv.org/", { 
-    //   mode: 'no-cors',
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(err => console.log(err));
+    const name = form.get('name');
+    const email = form.get('email');
+    const body = form.get('body');
 
-    const res = await fetch("https://solway-firth.netlify.app/.netlify/functions/contact", {
-      method: "post",
-      mode: 'no-cors',
-      body: JSON.stringify(form),
+    if (!validateEmail(email)) {
+      $(this).children('.error-message').removeClass('d-none');
+      return;
+    } else {
+      $(this).children('.error-message').addClass('d-none');
+    }
+
+    const res = fetch('https://solway-firth.netlify.app/.netlify/functions/contact', {
+      method: 'post',
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        body: body,
+      }),
+    })
+    .then(function(response) {
+      if (response.status === 200) {
+        $("#contact-form").addClass('d-none');
+        $('.form-message').text('Thanks for reaching out!');
+      } else {
+        $('.form-message').text('Something went wrong');
+      }
+    })
+    .catch(function() {
+      $('.form-message').text('Something went wrong');
     });
-
-    console.log(res);
-  };
-
+  });
 });
 
 function currentSkill(dotIndex) {
@@ -128,4 +143,9 @@ function currentSkill(dotIndex) {
     if(index == dotIndex)
       $(this).removeClass("d-none");
   });
+}
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
