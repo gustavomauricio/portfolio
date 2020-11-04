@@ -19,10 +19,16 @@ footer {
 	background-image: url(../img/bg-landing.jpg);
 	background-position: bottom;
 	background-size: cover;
-	height: 70vh;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	color: #FFF;
+}
+
+@media screen and (min-width: 576px) {
+  #home {
+    height: 70vh;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
